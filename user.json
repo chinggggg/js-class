@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "陳小花",
+      "email": "a001@gmail.com",
+      "username": "a001",
+      "password": "12345"
+    },
+    {
+      "id": 2,
+      "name": "張小草",
+      "email": "b001@gmail.com",
+      "username": "b001",
+      "password": "12345"
+    }
+  ]
+}

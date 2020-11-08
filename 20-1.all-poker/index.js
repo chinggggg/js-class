@@ -24,30 +24,31 @@ function createCard(suit, point) {
     display: Poker.getCardImage(100, suit, displayPoints[point - 1]),
   }
 }
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1))
+// function shuffle(array) {
+//   for (let i = array.length - 1; i > 0; i--) {
+//     let j = Math.floor(Math.random() * (i + 1))
 
-    ;[array[i], array[j]] = [array[j], array[i]]
-  }
+//     ;[array[i], array[j]] = [array[j], array[i]]
+//   }
 
-  return array
-}
+//   return array
+// }
 
 function initCards() {
-  const tempCards = []
+  // const tempCards = []
   const suits = ['h', 'd', 's', 'c']
   const points = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
   for (let i = 0; i < suits.length; i++) {
     for (let j = 0; j < points.length; j++) {
-      tempCards.push(createCard(suits[i], points[j]))
+      cards.push(createCard(suits[i], points[j]))
+      console.log('cards', cards)
     }
   }
 
-  cards = shuffle(tempCards)
+  // cards = shuffle(tempCards)
 }
 // 測試
-// initCards()
-// console.log('cards', cards)
-// desk.appendChild(cards[7].display)
+initCards()
+
+desk.appendChild(cards[7].display)

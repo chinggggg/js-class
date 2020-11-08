@@ -2,6 +2,7 @@ const year = document.getElementById('year')
 const month = document.getElementById('month')
 const day = document.getElementById('day')
 const checkAge = document.getElementById('checkAge')
+const result = document.querySelector('#result')
 
 let yearOption = '<option value="0">請選擇</option>'
 
@@ -76,4 +77,10 @@ checkAge.addEventListener('click', function () {
   console.log('now', nowY, nowM, nowD)
 
   let over18 = false
+
+  if (nowY - y > 18) over18 = true
+  if (nowY - y === 18 && nowM > m) over18 = true
+  if (nowY - y === 18 && nowM - m === 0 && nowD >= d) over18 = true
+
+  result.innerHTML = over18 ? '已滿18歲' : '未滿18歲'
 })
